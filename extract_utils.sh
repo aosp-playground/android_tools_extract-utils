@@ -430,6 +430,7 @@ function write_blueprint_packages() {
             else
                 printf '\tcertificate: "platform",\n'
             fi
+            printf '\tenforce_uses_libs: false,\n'
         elif [ "$CLASS" = "JAVA_LIBRARIES" ]; then
             printf 'dex_import {\n'
             printf '\tname: "%s",\n' "$PKGNAME"
